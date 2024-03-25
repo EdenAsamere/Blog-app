@@ -9,11 +9,17 @@
   "main": "index.js",
 
   "scripts": {
+
     "start": "node index.js",
-    "dev":  "nodemon index.ts",
+
+    "dev": "nodemon index.ts",
+
     "build": "tsc --outDir dist",
+
     "lint": "eslint . --ext .ts",
+
     "test": "jest"
+
   },
 
   "author": "",

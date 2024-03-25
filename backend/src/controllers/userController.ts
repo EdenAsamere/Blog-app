@@ -40,8 +40,8 @@ export const updateProfile = async (req: IUserMessage, res: Response): Promise<v
     try {
         const userId: string = req.params.userId;
         const userData: User = req.body;
-        console.log(req.userData?.userId.toString())
-        console.log(userId)
+        // console.log(req.userData?.userId.toString())
+        // console.log(userId)
         if (req.userData?.userId.toString()!== userId){
             res.status(401).json({message:'Unauthorized'})
             return

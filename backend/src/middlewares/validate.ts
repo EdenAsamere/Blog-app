@@ -14,7 +14,7 @@ export const validate =
             } catch (e: any) {
                 console.log({ e })
                 const message = e.errors.map((err: any) => err.message)
-                return res.status(400).json({ message: message.join(','), sucess: false });
+                return res.status(400).json({ message: message.join(','), success: false });
             }
         };
 

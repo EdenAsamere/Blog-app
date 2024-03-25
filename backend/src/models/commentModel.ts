@@ -6,22 +6,20 @@ export interface Comment extends Document{
     postId:String
 }
 
-const CommentSchema:Schema =  new Schema({
+export const CommentSchema:Schema =  new Schema({
     userId: {
         type: String,
         required: true,
       },
     comment:{
         type:String,
-        required:true,
-        unique:true,   
+        required:false,
     },
     postId:{
         type:String,
         required:true,
     },
-},
-{ timestamps: true }
+}
 );
 
 export default mongoose.model<Comment>('Comment', CommentSchema);

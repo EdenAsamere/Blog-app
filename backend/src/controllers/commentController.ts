@@ -1,9 +1,10 @@
 import { Request, Response} from 'express';
 import CommentModel, { Comment } from '../models/commentModel';
 import postModel from '../models/postModel';
+import { IUserMessage } from '../middlewares/authMiddleware';
 
 
-export const createComment = async (req: Request, res: Response): Promise<void> => {
+export const createComment = async (req: IUserMessage, res: Response): Promise<void> => {
     try {
         const CommentData: Comment = req.body; 
         const newComment = new CommentModel(CommentData);

@@ -1,8 +1,8 @@
 import { Request, Response} from 'express';
 import * as bcrypt from "bcryptjs";
 import * as jwt from "jsonwebtoken";
-import UserModel, { User } from '../models/userModel';
-
+import UserModel, { User } from '../models/userModel'; 
+  
 export const signUpUser = async (req: Request, res: Response): Promise<void> => {
     try {
         const {email, password, username} = req.body;
