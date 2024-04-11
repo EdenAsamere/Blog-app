@@ -1,5 +1,5 @@
-import *as express from 'express';
-import * as cors from 'cors';
+import express from 'express';
+import cors from 'cors';
 import connectDB from './src/config/connectDB';
 import post from './src/routes/postRoute';
 import comment from './src/routes/commentRoute';
